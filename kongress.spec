@@ -2,7 +2,7 @@
 #define commit cc1ac2452e41873741c8b5f3fcafa29ae3ce5a30
 
 Name:		kongress
-Version:	21.07
+Version:	21.08
 Release:	%{?snapshot:1.%{snapshot}.}1
 Summary:	Companion application for conference attendees
 %if 0%{?snapshot}
