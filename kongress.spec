@@ -1,14 +1,15 @@
-#define snapshot 20200916
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+#define git 20200916
 #define commit cc1ac2452e41873741c8b5f3fcafa29ae3ce5a30
 
 Name:		kongress
-Version:	22.11
-Release:	%{?snapshot:1.%{snapshot}.}1
+Version:	23.08.0
+Release:	%{?git:0.%{git}.}1
 Summary:	Companion application for conference attendees
-%if 0%{?snapshot}
+%if 0%{?git}
 Source0:	https://invent.kde.org/plasma-mobile/kongress/-/archive/v%{version}/kongress-v%{version}.tar.bz2
 %else
-Source0:	https://download.kde.org/stable/plasma-mobile/%{version}/%{name}-%{version}.tar.xz
+Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 %endif
 License:	GPLv3
 Group:		Applications/Productivity
