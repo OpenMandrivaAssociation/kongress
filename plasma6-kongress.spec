@@ -1,13 +1,15 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-#define git 20200916
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		plasma6-kongress
-Version:	24.01.95
+Version:	24.01.96
 Release:	%{?git:0.%{git}.}1
 Summary:	Companion application for conference attendees
-%if 0%{?git}
-Source0:	https://invent.kde.org/plasma-mobile/kongress/-/archive/v%{version}/kongress-v%{version}.tar.bz2
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/utilities/kongress/-/archive/%{gitbranch}/kongress-%{gitbranchd}.tar.bz2
 %else
 Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/kongress-%{version}.tar.xz
 %endif
@@ -40,7 +42,7 @@ BuildRequires:	cmake(KF6Notifications)
 Companion application for conference attendees
 
 %prep
-%autosetup -p1 -n kongress-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kongress-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja -G Ninja
