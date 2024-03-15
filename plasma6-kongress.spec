@@ -6,7 +6,7 @@
 
 Name:		plasma6-kongress
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Summary:	Companion application for conference attendees
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kongress/-/archive/%{gitbranch}/kongress-%{gitbranchd}.tar.bz2
