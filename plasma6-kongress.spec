@@ -37,6 +37,7 @@ BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6Notifications)
+BuildRequires:	cmake(KF6KirigamiAddons)
 
 %description
 Companion application for conference attendees
