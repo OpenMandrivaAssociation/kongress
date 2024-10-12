@@ -5,7 +5,7 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		plasma6-kongress
-Version:	24.08.1
+Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Summary:	Companion application for conference attendees
 %if 0%{?git:1}
