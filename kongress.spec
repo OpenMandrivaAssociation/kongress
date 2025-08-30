@@ -5,7 +5,7 @@
 #define commit cc1ac2462e41873741c8b6f3fcafa29ae3ce6a30
 
 Name:		kongress
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 Summary:	Companion application for conference attendees
 %if 0%{?git:1}
