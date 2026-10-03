@@ -6,7 +6,7 @@
 
 Name:		kongress
 Version:	26.08.1
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Summary:	Companion application for conference attendees
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kongress/-/archive/%{gitbranch}/kongress-%{gitbranchd}.tar.bz2
